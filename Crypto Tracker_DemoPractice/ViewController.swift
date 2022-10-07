@@ -40,14 +40,23 @@ class ViewController: UIViewController {
             switch result {
                 case .success(let models):
                     
-                    self?.viewModel = models.compactMap({
+                    self?.viewModel = models.compactMap({ model in
                         
                         // number formatter
-                        let price = $0.price_usd ?? 0
+                        let price = model.price_usd ?? 0
                         let formatter = ViewController.numberFormatter
                         let priceString = formatter.string(from: NSNumber(value: price))
                         
-                        return CryptoTableViewCellViewModel(name: $0.name ?? "N/A", symbol: $0.asset_id, price: priceString ?? "N/A")
+                        let iconUrl = URL(string: APICaller.shared.icons.filter ({ icon in
+                            icon.asset_id == model.asset_id
+                        }).first?.url ?? "")
+
+                        return CryptoTableViewCellViewModel(
+                            name: model.name ?? "N/A",
+                            symbol: model.asset_id,
+                            price: priceString ?? "N/A",
+                            iconUrl: iconUrl
+                        )
                     })
                     
                     DispatchQueue.main.async {

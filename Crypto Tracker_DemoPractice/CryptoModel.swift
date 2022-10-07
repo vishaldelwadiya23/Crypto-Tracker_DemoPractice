@@ -13,3 +13,8 @@ struct CryptoModel: Codable {
     let price_usd: Float?
     let id_icon: String?
 }
+
+struct Icons: Codable {
+    let asset_id: String
+    let url: String
+}
