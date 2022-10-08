@@ -47,6 +47,7 @@ final class APICaller {
                 completionHandler(.success(cryptos.sorted { (first, second) -> Bool in
                     return first.price_usd ?? 0 > second.price_usd ?? 0
                 }))
+                //completionHandler(.success(cryptos))
                 
             } catch let error {
                 completionHandler(.failure(error))
