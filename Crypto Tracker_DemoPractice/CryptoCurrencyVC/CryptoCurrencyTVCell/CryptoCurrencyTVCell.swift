@@ -59,7 +59,7 @@ class CryptoCurrencyTVCell: UITableViewCell {
         lblSymbol.text = cellModel.symbol
         lblPrice.text = cellModel.price
         
-        print(cellModel.iconUrl as Any)
+        //print(cellModel.iconUrl as Any)
         
         if (cellModel.iconUrl != nil) {
             // icon caches in memory using class

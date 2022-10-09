@@ -97,6 +97,7 @@ class CryptoCurrencyVC: UIViewController {
                 })
                 
                 print("2 leave")
+                self?.tblCryptoCurrency.hideActivityIndicator()
 
                 DispatchQueue.main.async {
                     self?.tblCryptoCurrency.reloadData()
@@ -110,7 +111,8 @@ class CryptoCurrencyVC: UIViewController {
         
         group.enter()
         print("1 enter")
-        
+        tblCryptoCurrency.showActivityIndicator()
+
         HttpUtility.shared.getApiData(requestUrl: url, requestType: [CryptoIcons].self) { [weak self] (response) in
 
             if let responseData = response {
@@ -173,5 +175,22 @@ extension CryptoCurrencyVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+}
+
+//MARK: - Activity indicator in tableView
+extension UITableView {
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            let activityView = UIActivityIndicatorView(style: .large)
+            self.backgroundView = activityView
+            activityView.startAnimating()
+        }
+    }
+
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            self.backgroundView = nil
+        }
     }
 }
