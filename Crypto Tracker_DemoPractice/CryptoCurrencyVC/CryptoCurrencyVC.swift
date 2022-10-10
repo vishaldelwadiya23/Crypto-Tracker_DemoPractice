@@ -17,8 +17,10 @@ class CryptoCurrencyVC: UIViewController {
     // table view cell model
     private var viewModel = [CryptoTableViewCellModel]()
 
+    // dispatch group for 2 api calling
     let group = DispatchGroup()
 
+    // number formatter for currency price float
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.allowsFloats = true
@@ -40,14 +42,14 @@ class CryptoCurrencyVC: UIViewController {
         let cryptoIconsBlockOperation = BlockOperation()
         cryptoIconsBlockOperation.addExecutionBlock {
             // get crypto currency icon
-            let urlCryptoIcons = URL(string: Constants.currencyIconUrl)
+            let urlCryptoIcons = URL(string: Constants.iconsEndPoint)
             self.getAllCryptoIcons(url: urlCryptoIcons!)
         }
         
         let cryptoDataBlockOperation = BlockOperation()
         cryptoDataBlockOperation.addExecutionBlock {
             // get crypto currency data
-            let urlCryptoData = URL(string: Constants.currencyUrl)
+            let urlCryptoData = URL(string: Constants.assetsEndPoint)
             self.getAllCryptoCurrencyData(url: urlCryptoData!)
         }
         
@@ -58,7 +60,9 @@ class CryptoCurrencyVC: UIViewController {
         let operationQueue = OperationQueue()
         operationQueue.addOperation(cryptoIconsBlockOperation)
         operationQueue.addOperation(cryptoDataBlockOperation)
+ 
     }
+
 
     //MARK: - Get Crypto Currency Data Using API
     func getAllCryptoCurrencyData(url: URL) {
@@ -67,7 +71,7 @@ class CryptoCurrencyVC: UIViewController {
              
         print("2 enter")
 
-        HttpUtility.shared.getApiData(requestUrl: url, requestType: [CryptoCurrencyModel].self) { [weak self] (response) in
+        HttpUtility.shared.postApiData(requestUrl: url, requestBody: nil, requestType: [CryptoCurrencyModel].self) { [weak self] (response) in
                         
             if let responseData = response {
                 
@@ -75,7 +79,7 @@ class CryptoCurrencyVC: UIViewController {
                 self?.aryCryptoCurrency = responseData.sorted(by: { (first, second) -> Bool in
                     first.price_usd ?? 0 > second.price_usd ?? 0
                 })
-                
+                 
                 // return crypto tableview cell
                 self?.viewModel = self!.aryCryptoCurrency.compactMap({ model in
                     
@@ -89,7 +93,7 @@ class CryptoCurrencyVC: UIViewController {
                     }.first?.url
                     
                     return CryptoTableViewCellModel(
-                        name: model.asset_id,
+                        name: model.name ?? "N/A",
                         symbol: model.asset_id,
                         price: priceString ?? "N/A",
                         iconUrl: iconImgUrlString
@@ -113,7 +117,7 @@ class CryptoCurrencyVC: UIViewController {
         print("1 enter")
         tblCryptoCurrency.showActivityIndicator()
 
-        HttpUtility.shared.getApiData(requestUrl: url, requestType: [CryptoIcons].self) { [weak self] (response) in
+        HttpUtility.shared.postApiData(requestUrl: url, requestBody: nil, requestType: [CryptoIcons].self) { [weak self] (response) in
 
             if let responseData = response {
                 
@@ -139,34 +143,32 @@ extension CryptoCurrencyVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return aryCryptoCurrency.count
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cryptoCurrencyTVCellIdentifier, for: indexPath) as? CryptoCurrencyTVCell else { fatalError() }
-//        cell.lblName.text = aryCryptoCurrency[indexPath.row].name
-//        cell.lblSymbol.text = aryCryptoCurrency[indexPath.row].asset_id
-//
-//        // float to string using NumberFormatter and use currency in formatter
-//        let price = aryCryptoCurrency[indexPath.row].price_usd ?? 0
-//        let priceString = numberFormatter.string(from: NSNumber(value: price))
-//        cell.lblPrice.text = priceString
-        
-        cell.configureCell(with: viewModel[indexPath.row])
-        //cell.getIconUrl(aryicon: aryIcons, strAssetId: aryCryptoCurrency[indexPath.row].asset_id)
-//        let iconUrl = URL(string: aryIcons.filter ({ icon in
-//            icon.asset_id == aryCryptoCurrency[indexPath.row].asset_id
-//        }).first?.url ?? "")
 
-       // print(iconUrl!)
-//        do {
-//            let data = try Data(contentsOf: iconUrl!)
-//            cell.imgIconCryptoCurrency.image = UIImage(data: data)
-//        } catch let error {
-//            print(error)
-//        }
+        cell.configureCell(with: viewModel[indexPath.row])
+        
+        /*cell.lblName.text = aryCryptoCurrency[indexPath.row].name
+        cell.lblSymbol.text = aryCryptoCurrency[indexPath.row].asset_id
+        
+        let price = aryCryptoCurrency[indexPath.row].price_usd ?? 0
+        let priceString = self.numberFormatter.string(from: NSNumber(value: price))
+        cell.lblPrice.text = priceString
+        */
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let DetailVC = storyboard?.instantiateViewController(identifier: Constants.cryptoCurrencyDetailVCIdentifier) as! CryptoCurrencyDetailVC
+        DetailVC.strAssetsId = viewModel[indexPath.row].symbol
+        DetailVC.strNameTitle = viewModel[indexPath.row].name
+        if let dataIcon = viewModel[indexPath.row].iconData {
+            DetailVC.dataIconImage = dataIcon
+        }
+        self.navigationController?.pushViewController(DetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

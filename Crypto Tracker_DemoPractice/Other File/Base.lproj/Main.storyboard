@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>
-        <!--Crypto Tracker-->
+        <!--Crypto History-->
         <scene sceneID="C6R-t6-qLE">
             <objects>
                 <viewController storyboardIdentifier="CryptoCurrencyVC" id="NlR-54-Ng7" customClass="CryptoCurrencyVC" customModule="Crypto_Tracker_DemoPractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U28-2n-piO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U28-2n-piO">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -68,7 +68,7 @@
                             <constraint firstItem="U28-2n-piO" firstAttribute="top" secondItem="5tx-Np-7u4" secondAttribute="top" id="zRZ-jQ-pKm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Crypto Tracker" id="5zc-fw-67l"/>
+                    <navigationItem key="navigationItem" title="Crypto History" id="5zc-fw-67l"/>
                     <connections>
                         <outlet property="tblCryptoCurrency" destination="U28-2n-piO" id="lDZ-hv-wVh"/>
                     </connections>
@@ -76,6 +76,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtP-Kd-2SH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="871"/>
+        </scene>
+        <!--Crypto Currency DetailVC-->
+        <scene sceneID="qbX-PH-EpB">
+            <objects>
+                <viewController storyboardIdentifier="CryptoCurrencyDetailVC" id="fNF-7U-ap7" customClass="CryptoCurrencyDetailVC" customModule="Crypto_Tracker_DemoPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cl4-V0-0Dc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uVX-r0-XXx">
+                                <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fNF-7U-ap7" id="bUx-JX-Qzo"/>
+                                    <outlet property="delegate" destination="fNF-7U-ap7" id="duZ-Bd-FEc"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mae-Kw-379">
+                                <rect key="frame" x="20" y="64" width="374" height="90"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8LX-mt-JrW">
+                                        <rect key="frame" x="0.0" y="15" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="bSh-Yz-lZE"/>
+                                            <constraint firstAttribute="height" constant="60" id="ljK-bJ-fIr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-Ey-K7G">
+                                        <rect key="frame" x="80" y="27" width="294" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dZY-Ey-K7G" firstAttribute="centerY" secondItem="mae-Kw-379" secondAttribute="centerY" id="2dx-FD-A7C"/>
+                                    <constraint firstItem="8LX-mt-JrW" firstAttribute="centerY" secondItem="mae-Kw-379" secondAttribute="centerY" id="56s-lQ-F2r"/>
+                                    <constraint firstAttribute="trailing" secondItem="dZY-Ey-K7G" secondAttribute="trailing" id="cTR-Kl-jvy"/>
+                                    <constraint firstItem="8LX-mt-JrW" firstAttribute="leading" secondItem="mae-Kw-379" secondAttribute="leading" id="d9Z-aa-vky"/>
+                                    <constraint firstItem="dZY-Ey-K7G" firstAttribute="leading" secondItem="8LX-mt-JrW" secondAttribute="trailing" constant="20" id="qeN-zG-EdO"/>
+                                    <constraint firstAttribute="height" constant="90" id="yzm-f6-Igg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="72B-Mx-GWT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uVX-r0-XXx" firstAttribute="top" secondItem="mae-Kw-379" secondAttribute="bottom" constant="20" id="4Eq-hv-soj"/>
+                            <constraint firstItem="mae-Kw-379" firstAttribute="leading" secondItem="72B-Mx-GWT" secondAttribute="leading" constant="20" id="6bd-Jq-veh"/>
+                            <constraint firstItem="uVX-r0-XXx" firstAttribute="bottom" secondItem="72B-Mx-GWT" secondAttribute="bottom" id="Fxz-ja-p5q"/>
+                            <constraint firstItem="uVX-r0-XXx" firstAttribute="leading" secondItem="72B-Mx-GWT" secondAttribute="leading" id="Il5-1f-ho3"/>
+                            <constraint firstItem="mae-Kw-379" firstAttribute="top" secondItem="72B-Mx-GWT" secondAttribute="top" constant="20" id="RE6-fW-1cS"/>
+                            <constraint firstItem="72B-Mx-GWT" firstAttribute="trailing" secondItem="mae-Kw-379" secondAttribute="trailing" constant="20" id="UcL-MV-bZZ"/>
+                            <constraint firstItem="72B-Mx-GWT" firstAttribute="trailing" secondItem="uVX-r0-XXx" secondAttribute="trailing" id="er2-SO-bbT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgIconAssets" destination="8LX-mt-JrW" id="loX-aM-TV4"/>
+                        <outlet property="lblAssetsTitle" destination="dZY-Ey-K7G" id="Jrc-4m-WYO"/>
+                        <outlet property="tblAssetsHistory" destination="uVX-r0-XXx" id="Efb-Gn-EEG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeP-fu-pJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="870.53571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uof-9h-4tX">

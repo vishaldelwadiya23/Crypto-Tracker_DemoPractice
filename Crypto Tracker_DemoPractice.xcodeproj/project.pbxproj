@@ -13,6 +13,11 @@
 		0E7D5A3828F086850035DFF3 /* CryptoCurrencyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D5A3628F086850035DFF3 /* CryptoCurrencyTVCell.swift */; };
 		0E7D5A3928F086850035DFF3 /* CryptoCurrencyTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D5A3728F086850035DFF3 /* CryptoCurrencyTVCell.xib */; };
 		0E7D5A4328F0910D0035DFF3 /* CryptoCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D5A4228F0910D0035DFF3 /* CryptoCurrencyModel.swift */; };
+		0E93276C28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93276B28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift */; };
+		0E93277028F4553100A1B54A /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93276F28F4553100A1B54A /* Extension + DateFormatter.swift */; };
+		0E93277328F455B700A1B54A /* ExchangerateHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93277228F455B700A1B54A /* ExchangerateHistoryModel.swift */; };
+		0E93277828F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93277628F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift */; };
+		0E93277928F482F700A1B54A /* CryptoCurrencyDetailTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E93277728F482F700A1B54A /* CryptoCurrencyDetailTVCell.xib */; };
 		0EA7899328EF57C30045563B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7899228EF57C30045563B /* AppDelegate.swift */; };
 		0EA7899528EF57C30045563B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7899428EF57C30045563B /* SceneDelegate.swift */; };
 		0EA7899728EF57C30045563B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7899628EF57C30045563B /* ViewController.swift */; };
@@ -31,6 +36,11 @@
 		0E7D5A3628F086850035DFF3 /* CryptoCurrencyTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyTVCell.swift; sourceTree = "<group>"; };
 		0E7D5A3728F086850035DFF3 /* CryptoCurrencyTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoCurrencyTVCell.xib; sourceTree = "<group>"; };
 		0E7D5A4228F0910D0035DFF3 /* CryptoCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyModel.swift; sourceTree = "<group>"; };
+		0E93276B28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyDetailVC.swift; sourceTree = "<group>"; };
+		0E93276F28F4553100A1B54A /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateFormatter.swift"; sourceTree = "<group>"; };
+		0E93277228F455B700A1B54A /* ExchangerateHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangerateHistoryModel.swift; sourceTree = "<group>"; };
+		0E93277628F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyDetailTVCell.swift; sourceTree = "<group>"; };
+		0E93277728F482F700A1B54A /* CryptoCurrencyDetailTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoCurrencyDetailTVCell.xib; sourceTree = "<group>"; };
 		0EA7898F28EF57C30045563B /* Crypto Tracker_DemoPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker_DemoPractice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA7899228EF57C30045563B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA7899428EF57C30045563B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +70,8 @@
 			children = (
 				0E7D5A3528F086330035DFF3 /* CryptoCurrencyTVCell */,
 				0E7D5A2828F0855A0035DFF3 /* CryptoCurrencyVC.swift */,
+				0E93277528F482AA00A1B54A /* CryptoCurrencyDetailTVCell */,
+				0E93276B28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift */,
 			);
 			path = CryptoCurrencyVC;
 			sourceTree = "<group>";
@@ -124,8 +136,26 @@
 			isa = PBXGroup;
 			children = (
 				0E7D5A4228F0910D0035DFF3 /* CryptoCurrencyModel.swift */,
+				0E93277228F455B700A1B54A /* ExchangerateHistoryModel.swift */,
 			);
 			path = CryptoModel;
+			sourceTree = "<group>";
+		};
+		0E93276E28F454FD00A1B54A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0E93276F28F4553100A1B54A /* Extension + DateFormatter.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0E93277528F482AA00A1B54A /* CryptoCurrencyDetailTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E93277628F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift */,
+				0E93277728F482F700A1B54A /* CryptoCurrencyDetailTVCell.xib */,
+			);
+			path = CryptoCurrencyDetailTVCell;
 			sourceTree = "<group>";
 		};
 		0EA7898628EF57C30045563B = {
@@ -147,6 +177,7 @@
 		0EA7899128EF57C30045563B /* Crypto Tracker_DemoPractice */ = {
 			isa = PBXGroup;
 			children = (
+				0E93276E28F454FD00A1B54A /* Extension */,
 				0E7D5A3C28F086990035DFF3 /* App&SceneDelegate */,
 				0E7D5A3028F085C70035DFF3 /* Common */,
 				0E7D5A2B28F0856C0035DFF3 /* HttpUtility */,
@@ -217,6 +248,7 @@
 			files = (
 				0EA7899F28EF58040045563B /* LaunchScreen.storyboard in Resources */,
 				0EA7899C28EF58040045563B /* Assets.xcassets in Resources */,
+				0E93277928F482F700A1B54A /* CryptoCurrencyDetailTVCell.xib in Resources */,
 				0EA7899A28EF57C40045563B /* Main.storyboard in Resources */,
 				0E7D5A3928F086850035DFF3 /* CryptoCurrencyTVCell.xib in Resources */,
 			);
@@ -232,10 +264,14 @@
 				0E7D5A2E28F085B80035DFF3 /* HttpUtility.swift in Sources */,
 				0EA789B028EF5D550045563B /* CryptoModel.swift in Sources */,
 				0EA7899728EF57C30045563B /* ViewController.swift in Sources */,
+				0E93277328F455B700A1B54A /* ExchangerateHistoryModel.swift in Sources */,
 				0E7D5A3828F086850035DFF3 /* CryptoCurrencyTVCell.swift in Sources */,
 				0E7D5A2928F0855A0035DFF3 /* CryptoCurrencyVC.swift in Sources */,
 				0EA7899328EF57C30045563B /* AppDelegate.swift in Sources */,
+				0E93277028F4553100A1B54A /* Extension + DateFormatter.swift in Sources */,
 				0E7D5A4328F0910D0035DFF3 /* CryptoCurrencyModel.swift in Sources */,
+				0E93277828F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift in Sources */,
+				0E93276C28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift in Sources */,
 				0EA7899528EF57C30045563B /* SceneDelegate.swift in Sources */,
 				0EA789AB28EF592D0045563B /* CryptoTableViewCell.swift in Sources */,
 				0EA789A828EF59100045563B /* APICaller.swift in Sources */,
