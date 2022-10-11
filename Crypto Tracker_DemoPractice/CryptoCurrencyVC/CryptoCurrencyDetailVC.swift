@@ -50,19 +50,16 @@ class CryptoCurrencyDetailVC: UIViewController {
         let dateFormatter = ISO8601DateFormatter()
         let strTime = dateFormatter.string(from: minusminutes)
         
-        print(strTime)
+        //print(strTime)
         
-        // time for history show - minus 5 minit form current time
-        let current = Date()
-        let dateFormatter1 = ISO8601DateFormatter()
-        let strTime1 = dateFormatter.string(from: current)
+        //https://rest.coinapi.io/v1/exchangerate/BTC/USD/history?period_id=10DAY&time_start=2022-09-01T00:00:00
+        let urlString = URL(string: "https://rest.coinapi.io/v1/exchangerate/BTC/USD/history?period_id=10DAY&time_start=2022-08-01T00:00:00")
+        //let urlString = URL(string: Constants.assetsHistoryEndPoint + strAssetsId + Constants.periodHistory + strPeriod + Constants.timeHistory + strTime)
+        //print(urlString as Any)
         
-        print(strTime1)
-        
-        //https://rest.coinapi.io/v1/exchangerate/BTC/USD/history?period_id=1DAY&time_start=2022-09-10T00:00:00
-        let urlString = URL(string: Constants.assetsHistoryEndPoint + strAssetsId + Constants.periodHistory + strPeriod + Constants.timeHistory + strTime)
-        print(urlString as Any)
-        getExchangeRate(url: urlString!)
+        if let url = urlString {
+            getExchangeRate(url: url)
+        }
     }
     
     func setupUI() {
@@ -116,5 +113,7 @@ extension CryptoCurrencyDetailVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }

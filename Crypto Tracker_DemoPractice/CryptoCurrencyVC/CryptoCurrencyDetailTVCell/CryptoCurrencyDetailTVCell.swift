@@ -38,10 +38,10 @@ class CryptoCurrencyDetailTVCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
             
-        lblOpenPrice = nil
-        lblClosePrice = nil
-        lblHighPrice = nil
-        lblLowPrice = nil
+        lblOpenPrice.text = nil
+        lblClosePrice.text = nil
+        lblHighPrice.text = nil
+        lblLowPrice.text = nil
     }
     
     func configureDetailCell(with cellModel: ExchangerateHistoryModel) {
@@ -63,10 +63,12 @@ class CryptoCurrencyDetailTVCell: UITableViewCell {
         let lowPrice = cellModel.rate_low ?? 0
         let lowPriceString = numberFormatter.string(from: NSNumber(value: lowPrice))
         
-        lblOpenPrice.text = openPriceString
-        lblClosePrice.text = closePriceString
-        lblHighPrice.text = highPriceString
-        lblLowPrice.text = lowPriceString
-
+        if let open = openPriceString, let close = closePriceString, let high = highPriceString, let low = lowPriceString {
+            
+            lblOpenPrice.text = open
+            lblClosePrice.text = close
+            lblHighPrice.text = high
+            lblLowPrice.text = low
+        }
     }
 }

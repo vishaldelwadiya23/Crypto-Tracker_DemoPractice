@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E059A0A28F59529004A9431 /* CandleStickChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E059A0928F59529004A9431 /* CandleStickChartVC.swift */; };
+		0E059A1228F5A503004A9431 /* CandleChartBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E059A1128F5A503004A9431 /* CandleChartBaseViewController.swift */; };
+		0E059A1E28F5EFC5004A9431 /* CryptoCandleChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E059A1D28F5EFC5004A9431 /* CryptoCandleChartVC.swift */; };
 		0E7D5A2928F0855A0035DFF3 /* CryptoCurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D5A2828F0855A0035DFF3 /* CryptoCurrencyVC.swift */; };
 		0E7D5A2E28F085B80035DFF3 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D5A2D28F085B80035DFF3 /* HttpUtility.swift */; };
 		0E7D5A3228F0861C0035DFF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D5A3128F0861C0035DFF3 /* Constants.swift */; };
@@ -27,9 +30,14 @@
 		0EA789A828EF59100045563B /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789A728EF59100045563B /* APICaller.swift */; };
 		0EA789AB28EF592D0045563B /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789AA28EF592D0045563B /* CryptoTableViewCell.swift */; };
 		0EA789B028EF5D550045563B /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789AF28EF5D550045563B /* CryptoModel.swift */; };
+		4B1DE7B18D82A92D2BB2DBDA /* Pods_Crypto_Tracker_DemoPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291D143BC717B32088616FE /* Pods_Crypto_Tracker_DemoPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0291D143BC717B32088616FE /* Pods_Crypto_Tracker_DemoPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypto_Tracker_DemoPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E059A0928F59529004A9431 /* CandleStickChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChartVC.swift; sourceTree = "<group>"; };
+		0E059A1128F5A503004A9431 /* CandleChartBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartBaseViewController.swift; sourceTree = "<group>"; };
+		0E059A1D28F5EFC5004A9431 /* CryptoCandleChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCandleChartVC.swift; sourceTree = "<group>"; };
 		0E7D5A2828F0855A0035DFF3 /* CryptoCurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyVC.swift; sourceTree = "<group>"; };
 		0E7D5A2D28F085B80035DFF3 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		0E7D5A3128F0861C0035DFF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		0EA789A728EF59100045563B /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0EA789AA28EF592D0045563B /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		0EA789AF28EF5D550045563B /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		4968639F84E4AD351BABA0F6 /* Pods-Crypto Tracker_DemoPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Tracker_DemoPractice.release.xcconfig"; path = "Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice.release.xcconfig"; sourceTree = "<group>"; };
+		EC2146F77D15FCB215762F3E /* Pods-Crypto Tracker_DemoPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Tracker_DemoPractice.debug.xcconfig"; path = "Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +69,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1DE7B18D82A92D2BB2DBDA /* Pods_Crypto_Tracker_DemoPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E059A0828F594CC004A9431 /* CandleStickChartVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E059A1128F5A503004A9431 /* CandleChartBaseViewController.swift */,
+				0E059A0928F59529004A9431 /* CandleStickChartVC.swift */,
+			);
+			path = CandleStickChartVC;
+			sourceTree = "<group>";
+		};
+		0E059A1C28F5EFC5004A9431 /* Crypto Candle Chart */ = {
+			isa = PBXGroup;
+			children = (
+				0E059A1D28F5EFC5004A9431 /* CryptoCandleChartVC.swift */,
+			);
+			path = "Crypto Candle Chart";
+			sourceTree = "<group>";
+		};
 		0E7D5A2728F084150035DFF3 /* CryptoCurrencyVC */ = {
 			isa = PBXGroup;
 			children = (
+				0E059A1C28F5EFC5004A9431 /* Crypto Candle Chart */,
+				0E059A0828F594CC004A9431 /* CandleStickChartVC */,
 				0E7D5A3528F086330035DFF3 /* CryptoCurrencyTVCell */,
 				0E7D5A2828F0855A0035DFF3 /* CryptoCurrencyVC.swift */,
 				0E93277528F482AA00A1B54A /* CryptoCurrencyDetailTVCell */,
@@ -163,6 +193,8 @@
 			children = (
 				0EA7899128EF57C30045563B /* Crypto Tracker_DemoPractice */,
 				0EA7899028EF57C30045563B /* Products */,
+				FAB7E162502719FDF235D560 /* Pods */,
+				B5AE33AA50837478630CD27D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +221,23 @@
 			path = "Crypto Tracker_DemoPractice";
 			sourceTree = "<group>";
 		};
+		B5AE33AA50837478630CD27D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0291D143BC717B32088616FE /* Pods_Crypto_Tracker_DemoPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAB7E162502719FDF235D560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC2146F77D15FCB215762F3E /* Pods-Crypto Tracker_DemoPractice.debug.xcconfig */,
+				4968639F84E4AD351BABA0F6 /* Pods-Crypto Tracker_DemoPractice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EA789A328EF58040045563B /* Build configuration list for PBXNativeTarget "Crypto Tracker_DemoPractice" */;
 			buildPhases = (
+				F93459F3AD5F6D2F3C50380F /* [CP] Check Pods Manifest.lock */,
 				0EA7898B28EF57C30045563B /* Sources */,
 				0EA7898C28EF57C30045563B /* Frameworks */,
 				0EA7898D28EF57C30045563B /* Resources */,
+				5A401B73704FDCD3E73D030C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +307,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A401B73704FDCD3E73D030C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F93459F3AD5F6D2F3C50380F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Crypto Tracker_DemoPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0EA7898B28EF57C30045563B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,7 +356,9 @@
 			files = (
 				0E7D5A2E28F085B80035DFF3 /* HttpUtility.swift in Sources */,
 				0EA789B028EF5D550045563B /* CryptoModel.swift in Sources */,
+				0E059A1E28F5EFC5004A9431 /* CryptoCandleChartVC.swift in Sources */,
 				0EA7899728EF57C30045563B /* ViewController.swift in Sources */,
+				0E059A0A28F59529004A9431 /* CandleStickChartVC.swift in Sources */,
 				0E93277328F455B700A1B54A /* ExchangerateHistoryModel.swift in Sources */,
 				0E7D5A3828F086850035DFF3 /* CryptoCurrencyTVCell.swift in Sources */,
 				0E7D5A2928F0855A0035DFF3 /* CryptoCurrencyVC.swift in Sources */,
@@ -272,6 +367,7 @@
 				0E7D5A4328F0910D0035DFF3 /* CryptoCurrencyModel.swift in Sources */,
 				0E93277828F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift in Sources */,
 				0E93276C28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift in Sources */,
+				0E059A1228F5A503004A9431 /* CandleChartBaseViewController.swift in Sources */,
 				0EA7899528EF57C30045563B /* SceneDelegate.swift in Sources */,
 				0EA789AB28EF592D0045563B /* CryptoTableViewCell.swift in Sources */,
 				0EA789A828EF59100045563B /* APICaller.swift in Sources */,
@@ -419,6 +515,7 @@
 		};
 		0EA789A428EF58040045563B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2146F77D15FCB215762F3E /* Pods-Crypto Tracker_DemoPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +534,7 @@
 		};
 		0EA789A528EF58040045563B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4968639F84E4AD351BABA0F6 /* Pods-Crypto Tracker_DemoPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
