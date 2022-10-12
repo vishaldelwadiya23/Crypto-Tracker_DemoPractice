@@ -298,6 +298,7 @@ class CandleChartBaseViewController: UIViewController, ChartViewDelegate {
     //extension DemoBaseViewController: ChartViewDelegate {
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         NSLog("chartValueSelected");
+        print("Click to show X point:- \(highlight.x), and Click to show y point:- \(highlight.y)")
     }
     
     func chartValueNothingSelected(_ chartView: ChartViewBase) {

@@ -30,5 +30,9 @@ final class Constants {
     static let cryptoCurrencyTVCellIdentifier = "CryptoCurrencyTVCell"
     static let cryptoCurrencyDetailTVCellIdentifier = "CryptoCurrencyDetailTVCell"
 
+    // candle stick chart url
+    //static let candleChartEndPoint = "https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/latest?period_id=1MIN"
+    static let candleChartEndPoint = "https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1MTH&time_start=2021-10-12T00:00:00"
 
+    
 }

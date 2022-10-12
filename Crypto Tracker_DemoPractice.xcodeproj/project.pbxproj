@@ -30,6 +30,14 @@
 		0EA789A828EF59100045563B /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789A728EF59100045563B /* APICaller.swift */; };
 		0EA789AB28EF592D0045563B /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789AA28EF592D0045563B /* CryptoTableViewCell.swift */; };
 		0EA789B028EF5D550045563B /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA789AF28EF5D550045563B /* CryptoModel.swift */; };
+		0EAE3FAD28F6A13E00FB7E08 /* CandleChartResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FAC28F6A13E00FB7E08 /* CandleChartResponseModel.swift */; };
+		0EAE3FB728F6FA1B00FB7E08 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB028F6FA1B00FB7E08 /* XYMarkerView.swift */; };
+		0EAE3FB828F6FA1B00FB7E08 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB128F6FA1B00FB7E08 /* RadarMarkerView.swift */; };
+		0EAE3FB928F6FA1B00FB7E08 /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB328F6FA1B00FB7E08 /* IntAxisValueFormatter.swift */; };
+		0EAE3FBA28F6FA1B00FB7E08 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB428F6FA1B00FB7E08 /* DayAxisValueFormatter.swift */; };
+		0EAE3FBB28F6FA1B00FB7E08 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB528F6FA1B00FB7E08 /* DateValueFormatter.swift */; };
+		0EAE3FBC28F6FA1B00FB7E08 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FB628F6FA1B00FB7E08 /* LargeValueFormatter.swift */; };
+		0EAE3FBF28F6FB6B00FB7E08 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE3FBE28F6FB6B00FB7E08 /* BalloonMarker.swift */; };
 		4B1DE7B18D82A92D2BB2DBDA /* Pods_Crypto_Tracker_DemoPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291D143BC717B32088616FE /* Pods_Crypto_Tracker_DemoPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +68,14 @@
 		0EA789A728EF59100045563B /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0EA789AA28EF592D0045563B /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		0EA789AF28EF5D550045563B /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		0EAE3FAC28F6A13E00FB7E08 /* CandleChartResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartResponseModel.swift; sourceTree = "<group>"; };
+		0EAE3FB028F6FA1B00FB7E08 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		0EAE3FB128F6FA1B00FB7E08 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
+		0EAE3FB328F6FA1B00FB7E08 /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntAxisValueFormatter.swift; sourceTree = "<group>"; };
+		0EAE3FB428F6FA1B00FB7E08 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		0EAE3FB528F6FA1B00FB7E08 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		0EAE3FB628F6FA1B00FB7E08 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		0EAE3FBE28F6FB6B00FB7E08 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		4968639F84E4AD351BABA0F6 /* Pods-Crypto Tracker_DemoPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Tracker_DemoPractice.release.xcconfig"; path = "Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice.release.xcconfig"; sourceTree = "<group>"; };
 		EC2146F77D15FCB215762F3E /* Pods-Crypto Tracker_DemoPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto Tracker_DemoPractice.debug.xcconfig"; path = "Target Support Files/Pods-Crypto Tracker_DemoPractice/Pods-Crypto Tracker_DemoPractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +183,7 @@
 			children = (
 				0E7D5A4228F0910D0035DFF3 /* CryptoCurrencyModel.swift */,
 				0E93277228F455B700A1B54A /* ExchangerateHistoryModel.swift */,
+				0EAE3FAC28F6A13E00FB7E08 /* CandleChartResponseModel.swift */,
 			);
 			path = CryptoModel;
 			sourceTree = "<group>";
@@ -209,6 +226,8 @@
 		0EA7899128EF57C30045563B /* Crypto Tracker_DemoPractice */ = {
 			isa = PBXGroup;
 			children = (
+				0EAE3FAF28F6FA1B00FB7E08 /* Components */,
+				0EAE3FB228F6FA1B00FB7E08 /* Formatters */,
 				0E93276E28F454FD00A1B54A /* Extension */,
 				0E7D5A3C28F086990035DFF3 /* App&SceneDelegate */,
 				0E7D5A3028F085C70035DFF3 /* Common */,
@@ -219,6 +238,27 @@
 				0E7D5A3E28F087630035DFF3 /* Other File */,
 			);
 			path = "Crypto Tracker_DemoPractice";
+			sourceTree = "<group>";
+		};
+		0EAE3FAF28F6FA1B00FB7E08 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0EAE3FBE28F6FB6B00FB7E08 /* BalloonMarker.swift */,
+				0EAE3FB028F6FA1B00FB7E08 /* XYMarkerView.swift */,
+				0EAE3FB128F6FA1B00FB7E08 /* RadarMarkerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0EAE3FB228F6FA1B00FB7E08 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				0EAE3FB328F6FA1B00FB7E08 /* IntAxisValueFormatter.swift */,
+				0EAE3FB428F6FA1B00FB7E08 /* DayAxisValueFormatter.swift */,
+				0EAE3FB528F6FA1B00FB7E08 /* DateValueFormatter.swift */,
+				0EAE3FB628F6FA1B00FB7E08 /* LargeValueFormatter.swift */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		B5AE33AA50837478630CD27D /* Frameworks */ = {
@@ -354,19 +394,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAE3FAD28F6A13E00FB7E08 /* CandleChartResponseModel.swift in Sources */,
 				0E7D5A2E28F085B80035DFF3 /* HttpUtility.swift in Sources */,
+				0EAE3FBB28F6FA1B00FB7E08 /* DateValueFormatter.swift in Sources */,
 				0EA789B028EF5D550045563B /* CryptoModel.swift in Sources */,
+				0EAE3FBA28F6FA1B00FB7E08 /* DayAxisValueFormatter.swift in Sources */,
 				0E059A1E28F5EFC5004A9431 /* CryptoCandleChartVC.swift in Sources */,
+				0EAE3FBC28F6FA1B00FB7E08 /* LargeValueFormatter.swift in Sources */,
 				0EA7899728EF57C30045563B /* ViewController.swift in Sources */,
 				0E059A0A28F59529004A9431 /* CandleStickChartVC.swift in Sources */,
 				0E93277328F455B700A1B54A /* ExchangerateHistoryModel.swift in Sources */,
+				0EAE3FB728F6FA1B00FB7E08 /* XYMarkerView.swift in Sources */,
 				0E7D5A3828F086850035DFF3 /* CryptoCurrencyTVCell.swift in Sources */,
 				0E7D5A2928F0855A0035DFF3 /* CryptoCurrencyVC.swift in Sources */,
 				0EA7899328EF57C30045563B /* AppDelegate.swift in Sources */,
 				0E93277028F4553100A1B54A /* Extension + DateFormatter.swift in Sources */,
 				0E7D5A4328F0910D0035DFF3 /* CryptoCurrencyModel.swift in Sources */,
+				0EAE3FB928F6FA1B00FB7E08 /* IntAxisValueFormatter.swift in Sources */,
+				0EAE3FBF28F6FB6B00FB7E08 /* BalloonMarker.swift in Sources */,
 				0E93277828F482F700A1B54A /* CryptoCurrencyDetailTVCell.swift in Sources */,
 				0E93276C28F3DCB000A1B54A /* CryptoCurrencyDetailVC.swift in Sources */,
+				0EAE3FB828F6FA1B00FB7E08 /* RadarMarkerView.swift in Sources */,
 				0E059A1228F5A503004A9431 /* CandleChartBaseViewController.swift in Sources */,
 				0EA7899528EF57C30045563B /* SceneDelegate.swift in Sources */,
 				0EA789AB28EF592D0045563B /* CryptoTableViewCell.swift in Sources */,
